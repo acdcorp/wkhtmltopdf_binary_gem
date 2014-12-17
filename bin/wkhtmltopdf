@@ -10,6 +10,8 @@
 require 'rbconfig'
 
 suffix = case RbConfig::CONFIG['host']
+when /x86_64-unknown-linux-gnu/
+  'heroku'
 when /x86_64.*linux/
   'linux_amd64'
 when /linux/
